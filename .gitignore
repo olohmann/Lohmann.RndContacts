@@ -26,7 +26,6 @@ Build_OUT/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-!Tools/
 
 #XUNIT
 *.VisualState.xml
