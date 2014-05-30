@@ -2,7 +2,7 @@
 {
     using System.Collections.ObjectModel;
 
-    public class NamePool
+    internal class NamePool
     {
         internal static readonly ReadOnlyCollection<string> LastNamePool = new ReadOnlyCollection<string>(
             new[]

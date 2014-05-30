@@ -5,9 +5,21 @@
     using System.Collections.ObjectModel;
     using Lohmann.RndContacts.Internal;
 
+    /// <summary>
+    /// A simple generator for made-up contacts. Great source for generating demo data on the fly.
+    /// </summary>
     public class RandomContactGenerator
     {
+        private static RandomContactGenerator _default;
         private readonly Random _random = new Random();
+
+        /// <summary>
+        /// Gets the default instance of the <see cref="RandomContactGenerator"/>.
+        /// </summary>
+        public static RandomContactGenerator Default
+        {
+            get { return _default ?? (_default = new RandomContactGenerator()); }
+        }
 
         /// <summary>
         /// Generates a given number of random contacts.
